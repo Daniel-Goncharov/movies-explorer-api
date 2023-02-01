@@ -9,7 +9,7 @@ const NotFoundError = require('../errors/NotFoundError');
 const auth = require('../middlewares/auth');
 
 // Не защищенные маршруты
-router.use('/', authRouter);
+router.use('', authRouter);
 // Защищенные маршруты
 router.use(auth);
 router.use('/users', userRouter);
