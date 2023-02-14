@@ -25,7 +25,7 @@ module.exports.updateProfile = (req, res, next) => {
       if (err.code === 11000) {
         return next(
           new ConflictError({
-            message: `Пользователь с таким email: ${email} уже существует.`,
+            message: 'Пользователь с таким email уже существует.',
           }),
         );
       }
